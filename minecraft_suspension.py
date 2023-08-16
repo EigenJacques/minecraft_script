@@ -18,6 +18,7 @@ for t in T:
     ax = fig.add_subplot()
     ax.scatter(x,np.round(y/np.max(y)*H*2,0)/2, label=f't = {t}', marker="s", s=1000)
     ax.scatter(x,0.5+np.round(y/np.max(y)*H*2,0)/2, label=f't = {t}', marker="s", s=1000, c="w")
+    ax.plot(x,y/np.max(y)*H*2/2, label=f't = {t}', c="r")
     ax.set_aspect("equal")
     ax.set_ylim(-0.5,4.5)
     ax.set_xticks(np.arange(-L/2,L/2+1,1)+0.5)
